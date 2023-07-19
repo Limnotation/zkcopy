@@ -2,16 +2,17 @@ package com.github.ksprojects.zkcopy.writer;
 
 import com.github.ksprojects.zkcopy.Node;
 import java.util.List;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.Transaction;
 import org.apache.zookeeper.ZooDefs.Ids;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Writer {
-    static Logger logger = Logger.getLogger(Writer.class);
+    static Logger logger = LoggerFactory.getLogger(Writer.class);
     
     private Node sourceRoot;
     private String destPath;

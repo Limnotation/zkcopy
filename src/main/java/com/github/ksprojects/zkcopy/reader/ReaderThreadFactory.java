@@ -5,12 +5,13 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ThreadFactory;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.ZooKeeper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 final class ReaderThreadFactory implements ThreadFactory {
     
-    private static final Logger LOG = Logger.getLogger(ReaderThreadFactory.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ReaderThreadFactory.class);
 
     private final String hostPort;
     private int timeout;

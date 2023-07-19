@@ -6,7 +6,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * ZooKeeper data reader
@@ -14,7 +16,7 @@ import org.apache.log4j.Logger;
  * @author schepanovsky@gmail.com
  */
 public final class Reader {
-    private static Logger logger = Logger.getLogger(Reader.class);
+    private static Logger logger = LoggerFactory.getLogger(Reader.class);
     private final int threadsNumber;
     private final String source;
     private String server;

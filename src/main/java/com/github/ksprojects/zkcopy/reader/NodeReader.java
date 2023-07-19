@@ -5,14 +5,15 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 final class NodeReader implements Runnable {
 
-    private static final Logger LOGGER = Logger.getLogger(NodeReader.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(NodeReader.class);
 
     private final Node znode;
     private final ExecutorService pool;

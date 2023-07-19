@@ -5,8 +5,10 @@ import com.github.ksprojects.zkcopy.Node;
 import com.github.ksprojects.zkcopy.reader.Reader;
 import com.github.ksprojects.zkcopy.writer.Writer;
 import java.util.concurrent.Callable;
-import org.apache.log4j.Logger;
 import org.apache.zookeeper.ZooKeeper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -14,7 +16,7 @@ import picocli.CommandLine.Option;
 @Command(name = "zkcopy", showDefaultValues = true)
 public class ZkCopy implements Callable<Void> {
 
-    private static final Logger LOGGER = Logger.getLogger(ZkCopy.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ZkCopy.class);
     private static final int DEFAULT_THREADS_NUMBER = 10;
     private static final boolean DEFAULT_COPY_ONLY = false;
     private static final boolean DEFAULT_IGNORE_EPHEMERAL_NODES = true;
